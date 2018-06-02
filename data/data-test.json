@@ -1,0 +1,148 @@
+{
+  "gridHeader": [
+    {
+      "fontName":"黑体",
+      "textAlign": "left",
+      "itemValue": "序号",
+      "fontSize": 17,
+      "isShow":true
+    },
+    {
+      "fontName":"黑体",
+      "textAlign": "center",
+      "itemValue": "商品图片",
+      "fontSize": 16,
+      "isShow":false
+    },
+    {
+      "fontName":"楷体",
+      "textAlign": "center",
+      "itemValue": "商品名称",
+      "fontSize": 18,
+      "isShow":true
+    },
+    {
+      "fontName":"宋体",
+      "textAlign": "right",
+      "itemValue": "商家编码",
+      "fontSize": 15,
+      "isShow":true
+    },
+    {
+      "fontName":"微软雅黑",
+      "textAlign": "left",
+      "itemValue": "货号",
+      "fontSize": 14,
+      "isShow":true
+    },
+    {
+      "fontName":"黑体",
+      "textAlign": "left",
+      "itemValue": "销售属性",
+      "fontSize": 12,
+      "isShow":true
+    },
+    {
+      "fontName":"黑体",
+      "textAlign": "left",
+      "itemValue": "单价",
+      "fontSize": 16,
+      "isShow":true
+    },
+    {
+      "fontName":"黑体",
+      "textAlign": "left",
+      "itemValue": "数量",
+      "fontSize": 16,
+      "isShow":true
+    },
+    {
+      "fontName":"黑体",
+      "textAlign": "left",
+      "itemValue": "金额",
+      "fontSize": 16,
+      "isShow":true
+    },
+    {
+      "fontName":"黑体",
+      "textAlign": "left",
+      "itemValue": "货位",
+      "fontSize": 16,
+      "isShow":false
+    }
+  ],
+  "gridBody": [
+    [
+      {
+        "fontName":"楷体",
+        "textAlign": "left",
+        "code": "1",
+        "fontSize": 14,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "left",
+        "code": "<img src='images/i1.jpg'/>",
+        "fontSize": 15,
+        "isShow":false
+      },
+      {
+        "fontName":"宋体",
+        "textAlign": "center",
+        "code": "衬衫",
+        "fontSize": 16,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "right",
+        "code": "B001",
+        "fontSize": 17,
+        "isShow":true
+      },
+      {
+        "fontName":"微软雅黑",
+        "textAlign": "left",
+        "code": "G001",
+        "fontSize": 18,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "left",
+        "code": "xxx",
+        "fontSize": 16,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "left",
+        "code": "80",
+        "fontSize": 16,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "left",
+        "code": "5",
+        "fontSize": 16,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "left",
+        "code": "400",
+        "fontSize": 16,
+        "isShow":true
+      },
+      {
+        "fontName":"黑体",
+        "textAlign": "left",
+        "code": "no-1",
+        "fontSize": 16,
+        "isShow":false
+      }
+    ]
+  ]
+}

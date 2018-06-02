@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>打印模板</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/template-test.min.css">
+	<style>
+		.template-edit{
+			float: left;
+			text-align: center;
+			width: 100px;
+			height: 50px;
+			cursor: pointer;
+		}
+		#target{
+			width: 500px;
+			height: 500px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="template-edit" onclick='xedit.init("#target",900,500)'>初始化</div>
+	<div class="template-edit" onclick='console.log(xedit.get())'>获取元素</div>
+	<div class="template-edit" onclick='xedit.setWidth(1200)'>设置宽</div>
+	<div class="template-edit" onclick='xedit.setHeight(700)'>设置高</div>
+	<div class="template-edit template-init-data">初始数据源</div>
+	<div class="template-edit add-img" >添加背景图片</div>
+	<div class="template-edit add-table" >添加一个表格</div>
+	<div class="template-edit add-default" onclick='xedit.addDefault("添加元素")'>添加默认元素</div>
+	<div class="template-edit add-custom" onclick='xedit.addCustom("添加元素")'>添加自定义元素</div>
+	<div id="target"></div>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/template-test.min.js"></script>
+	<script>
+    var datas = {
+      panel:{
+        width:650,
+        height:500
+      },
+      elements:[
+        {
+          code: "收货人",
+          h: 50,
+          style: "font-family: 楷体; font-size: 18px; text-align: center;",
+          type: "label",
+          w: 100,
+          x: 0,
+          y: 0,
+          value:"收货人-姓名"
+        },
+        {
+          code: "自定义",
+          h: 50,
+          style: "font-family: 楷体; font-size: 18px; text-align: center;",
+          type: "xlabel",
+          w: 100,
+          x: 0,
+          y: 0,
+          value:"收货人-姓名"
+        },
+        {
+          h: 69,
+          style: "cursor: move; left: 129px; top: 93px;",
+          tableData: {
+            "gridHeader": [
+              {
+                "fontName":"黑体",
+                "textAlign": "left",
+                "itemValue": "序号",
+                "fontSize": 17,
+                "isShow":true
+              },
+              {
+                "fontName":"黑体",
+                "textAlign": "center",
+                "itemValue": "商品图片",
+                "fontSize": 16,
+                "isShow":false
+              },
+              {
+                "fontName":"楷体",
+                "textAlign": "center",
+                "itemValue": "商品名称",
+                "fontSize": 18,
+                "isShow":true
+              },
+              {
+                "fontName":"宋体",
+                "textAlign": "right",
+                "itemValue": "商家编码",
+                "fontSize": 15,
+                "isShow":true
+              },
+              {
+                "fontName":"微软雅黑",
+                "textAlign": "left",
+                "itemValue": "货号",
+                "fontSize": 14,
+                "isShow":true
+              },
+              {
+                "fontName":"黑体",
+                "textAlign": "left",
+                "itemValue": "销售属性",
+                "fontSize": 12,
+                "isShow":true
+              },
+              {
+                "fontName":"黑体",
+                "textAlign": "left",
+                "itemValue": "单价",
+                "fontSize": 16,
+                "isShow":true
+              },
+              {
+                "fontName":"黑体",
+                "textAlign": "left",
+                "itemValue": "数量",
+                "fontSize": 16,
+                "isShow":true
+              },
+              {
+                "fontName":"黑体",
+                "textAlign": "left",
+                "itemValue": "金额",
+                "fontSize": 16,
+                "isShow":true
+              },
+              {
+                "fontName":"黑体",
+                "textAlign": "left",
+                "itemValue": "货位",
+                "fontSize": 16,
+                "isShow":false
+              }
+            ],
+            "gridBody": [
+              [
+                {
+                  "fontName":"楷体",
+                  "textAlign": "left",
+                  "code": "1",
+                  "fontSize": 14,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "left",
+                  "code": "<img src='images/i1.jpg'/>",
+                  "fontSize": 15,
+                  "isShow":false,
+                },
+                {
+                  "fontName":"宋体",
+                  "textAlign": "center",
+                  "code": "衬衫",
+                  "fontSize": 16,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "right",
+                  "code": "B001",
+                  "fontSize": 17,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"微软雅黑",
+                  "textAlign": "left",
+                  "code": "G001",
+                  "fontSize": 18,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "left",
+                  "code": "xxx",
+                  "fontSize": 16,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "left",
+                  "code": "80",
+                  "fontSize": 16,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "left",
+                  "code": "5",
+                  "fontSize": 16,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "left",
+                  "code": "400",
+                  "fontSize": 16,
+                  "isShow":true,
+                },
+                {
+                  "fontName":"黑体",
+                  "textAlign": "left",
+                  "code": "no-1",
+                  "fontSize": 16,
+                  "isShow":false,
+                }
+              ]
+            ]
+          },
+          type: "table",
+          w: 529,
+          x: 10,
+          y: 129
+        }
+      ]
+    };
+		$(".template-init-data").on("click",function () {
+			xedit.setDatas(datas);
+    });
+		$(".add-img").on("click",function () {
+			xedit.setImg("images/bg.jpg");
+    });
+		$(".add-table").on("click",function () {
+			xedit.addTable(datas.elements[2].tableData);
+    });
+    // 初始化
+    // var xedit = xedit.init("#target",500,800);
+    // API列表：
+    // 1、获取所有创建的元素
+    // var datas = xedit.get();
+    // 2、调整Panel的宽高
+    // xedit.setWidth(500);
+    // xedit.setHeight(800);
+    // 3、初始数据源xedit
+    // xedit.setDatas(datas);
+		//
+    // var datas = {
+    //   panel:{
+    //     width:500,
+    //     height:800
+    //   },
+    //   elemets:[{},{}
+		//
+    //   ]
+    // };
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/*
+Error: Invalid GBK character "\xE5"
+        on line 35 of base.scss
+
+30: .clearfix {
+31:   *zoom: 1;
+32:   &:before,&:after { display: table;  line-height: 0; content: ""; }
+33:   &:after { clear: both; }
+34: }
+35: //iframe height100%去掉容器纵向滚动条
+36: iframe{
+37:   vertical-align: middle;
+38: }
+39: 
+40: //改变滚动条样式
+
+Backtrace:
+base.scss:35
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1322:in `block in find_encoding_error'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `each'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `each_with_index'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `find_encoding_error'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:930:in `check_sass_encoding'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:439:in `check_encoding!'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:395:in `_to_tree'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/bin/scss:13:in `<top (required)>'
+C:/Ruby23/bin/scss:22:in `load'
+C:/Ruby23/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE5\"\A         on line 35 of base.scss\A \A 30: .clearfix {\A 31:   *zoom: 1;\A 32:   &:before,&:after { display: table;  line-height: 0; content: \"\"; }\A 33:   &:after { clear: both; }\A 34: }\A 35: //iframe height100%去掉容器纵向滚动条\A 36: iframe{\A 37:   vertical-align: middle;\A 38: }\A 39: \A 40: //改变滚动条样式"; }
