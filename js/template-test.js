@@ -1,152 +1,131 @@
 //table 数据
 var tableData = {
+  "code":"codeTable",
   "gridHeader": [
     {
-      "fontName":"黑体",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "序号",
-      "fontSize": 17,
-      "isShow":true
+      "isShow":true,
+      "code":"code0"
     },
     {
-      "fontName":"黑体",
-      "textAlign": "center",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "商品图片",
-      "fontSize": 16,
-      "isShow":false
+      "isShow":false,
+      "code":"code1"
     },
     {
-      "fontName":"楷体",
-      "textAlign": "center",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "商品名称",
-      "fontSize": 18,
-      "isShow":true
+      "isShow":true,
+      "code":"code2"
     },
     {
-      "fontName":"宋体",
-      "textAlign": "right",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "商家编码",
-      "fontSize": 15,
-      "isShow":true
+      "isShow":true,
+      "code":"code3"
     },
     {
-      "fontName":"微软雅黑",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "货号",
-      "fontSize": 14,
-      "isShow":true
+      "isShow":true,
+      "code":"code4"
     },
     {
-      "fontName":"黑体",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "销售属性",
-      "fontSize": 12,
-      "isShow":true
+      "isShow":true,
+      "code":"code5"
     },
     {
-      "fontName":"黑体",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "单价",
-      "fontSize": 16,
-      "isShow":true
+      "isShow":true,
+      "code":"code6"
     },
     {
-      "fontName":"黑体",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "数量",
-      "fontSize": 16,
-      "isShow":true
+      "isShow":true,
+      "code":"code7"
     },
     {
-      "fontName":"黑体",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "金额",
-      "fontSize": 16,
-      "isShow":true
+      "isShow":true,
+      "code":"code8"
     },
     {
-      "fontName":"黑体",
-      "textAlign": "left",
+      "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "货位",
-      "fontSize": 16,
-      "isShow":false
+      "isShow":false,
+      "code":"code9"
     }
   ],
   "gridBody": [
     [
       {
-        "fontName":"楷体",
-        "textAlign": "left",
-        "code": "1",
-        "fontSize": 14,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "1",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "left",
-        "code": "<img src='images/i1.jpg'/>",
-        "fontSize": 15,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "<img src='images/i1.jpg'/>",
         "isShow":false
       },
       {
-        "fontName":"宋体",
-        "textAlign": "center",
-        "code": "衬衫",
-        "fontSize": 16,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "衬衫",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "right",
-        "code": "B001",
-        "fontSize": 17,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "B001",
         "isShow":true
       },
       {
-        "fontName":"微软雅黑",
-        "textAlign": "left",
-        "code": "G001",
-        "fontSize": 18,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "G001",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "left",
-        "code": "xxx",
-        "fontSize": 16,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "xxx",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "left",
-        "code": "80",
-        "fontSize": 16,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "80",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "left",
-        "code": "5",
-        "fontSize": 16,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "5",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "left",
-        "code": "400",
-        "fontSize": 16,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "400",
         "isShow":true
       },
       {
-        "fontName":"黑体",
-        "textAlign": "left",
-        "code": "no-1",
-        "fontSize": 16,
+        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "itemValue": "no-1",
         "isShow":false
       }
     ]
   ]
 };
+// rgb转hex
+function rgb2hex(rgb) {
+  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  function hex(x) {
+    return ("0" + parseInt(x).toString(16)).slice(-2);
+  }
+  return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+}
 //创建普通元素
 var createElement = function (tag,attrs,html) {
   var element = document.createElement(tag);
@@ -331,10 +310,22 @@ var addElement = function () {
     resize(".move-element");
     panel();
   });
+  $(".add-panel .add-line").off("click").on("click",function () {
+    var addElem = $('<div class="div-line  move-element" direction="horizontal"></div>').appendTo($("#panel"));
+    switch ($(addElem).attr("direction")){
+      case "horizontal": $(addElem).addClass("line-h").removeClass("line-v");
+        break;
+      case "vertical": $(addElem).addClass("line-v").removeClass("line-h");
+        break;
+    }
+    drag(addElem,addElem,"#panel");
+    resize(".move-element");
+    panel();
+  });
 };
 var addTable = function (data,style) {
   var frag = document.createDocumentFragment();
-  var $table = $('<table class="table move-element"></table>').appendTo($(frag));
+  var $table = $('<table class="table move-element" code="'+data.code+'"></table>').appendTo($(frag));
   var $tbody = $('<tbody></tbody>').appendTo($table);
   var $gridHeader = $('<tr class="tr"></tr>').appendTo($tbody);
   if(style !== undefined){
@@ -348,9 +339,9 @@ var addTable = function (data,style) {
   //表头
   $.each(data.gridHeader,function (i, v) {
     if(v.isShow){
-      $('<th class="td" style="font-size: '+v.fontSize+'px;text-align: '+v.textAlign+';font-family: '+v.fontName+'">'+v.itemValue+'</th>').appendTo($gridHeader);
+      $('<th class="td" code="'+v.code+'" style="'+v.style+'">'+v.itemValue+'</th>').appendTo($gridHeader);
     }else{
-      $('<th class="td" style="font-size: '+v.fontSize+'px;text-align: '+v.textAlign+';font-family: '+v.fontName+';display: none">'+v.itemValue+'</th>').appendTo($gridHeader);
+      $('<th class="td" code="'+v.code+'" style="'+v.style+';display: none">'+v.itemValue+'</th>').appendTo($gridHeader);
     }
   });
 
@@ -359,9 +350,9 @@ var addTable = function (data,style) {
     var $gridBody = $('<tr class="tr"></tr>').appendTo($table);
     $.each(v1,function (i2,v2) {
       if(v2.isShow){
-        $('<td class="td" style="font-size: '+v2.fontSize+'px;text-align: '+v2.textAlign+';font-family: '+v2.fontName+'">'+v2.code+'</td>').appendTo($gridBody);
+        $('<td class="td" style="'+v2.style+'">'+v2.itemValue+'</td>').appendTo($gridBody);
       }else{
-        $('<td class="td" style="font-size: '+v2.fontSize+'px;text-align: '+v2.textAlign+';font-family: '+v2.fontName+';display: none">'+v2.code+'</td>').appendTo($gridBody);
+        $('<td class="td" style="'+v2.style+';display: none">'+v2.itemValue+'</td>').appendTo($gridBody);
       }
     });
   });
@@ -390,6 +381,7 @@ var panel = function () {
             var item = {};
             item.value = v.innerHTML;
             item.isShow = $(this).css("display") === "none"?false:true;
+            item.code   = $(v).attr('code') ;
             tableData.push(item);
           });
           renderTableEditPanel(tableData);
@@ -397,6 +389,8 @@ var panel = function () {
           renderDefaultEditPanel();
         }else if($this.hasClass("div-custom")){
           renderCustomEditPanel();
+        }else if($this.hasClass("div-line")){
+          renderLineEditPanel();
         }
 
         drag('.edit-panel>.title','.edit-panel',document.body);
@@ -461,6 +455,7 @@ var panel = function () {
             for (var j = 0;j < 2;j++){
               var item = {};
               var elem = $($this.find(".tr")[j]).children(".td")[i];
+
               item.fontSize        = $(elem).css("font-size");
               item.fontFamily      = $(elem).css("font-family");
               item.color           = $(elem).css("color");
@@ -469,12 +464,14 @@ var panel = function () {
               item.textDecoration  = $(elem).css("text-decoration");
               item.textAlign       = $(elem).css("text-align");
               item.beforStyle      = $(elem).attr("style");
+              item.code            = $(elem).attr("code");
               elementData.push(item);
             }
           }
           getData();
           if($(document.body).find('.table-ctrl').length <= 0){
             createTableStyle();
+            $('<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text" ></div></div>').appendTo($('.table-header .table-style'))
           }
           function createTableStyle() {
             createPanel(".table-ctrl");
@@ -488,23 +485,26 @@ var panel = function () {
             //添加底部按钮
             $('<div class="btns"><div class="btn-confirm">确定</div><div class="btn-cancel">取消</div></div>').appendTo($(".table-ctrl"));
 
-            var $style = $('<div class="ctrl-item">' +
+            var $style = $(
+              '<div class="ctrl-item">' +
                 '<label class="ctrl-item-title">字体/号</label>'+
                 '<div class="ctrl-item-content">'+
                   '<select class="font-select" name="fontFamily"><option value="黑体" name="heiTi">黑体</option><option value="楷体" name="kaiTi">楷体</option><option value="宋体" name="songTi">宋体</option><option value="微软雅黑" name="yahei">微软雅黑</option></select>' +
                   '<div class="font-size"><span class="icon-font"></span><input class="font-number" type="number" name="font-number" value="16" min="12"></div>' +
                 '</div>' +
-              '</div>\n' +
+              '</div>' +
               '<div class="ctrl-item"><label class="ctrl-item-title">粗斜体</label><div class="ctrl-item-content font-set"><div class="font-color">A<input class="color-choose" type="color"></div><div class="font-bold">B</div><div class="font-italic">I</div><div class="font-underline">U</div></div></div>' +
               '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'
             );
             $style.appendTo($(".table-style"));
+
           }
 
           renderTableStyle(elementData);
           function renderTableStyle(data) {
             function showStyle(element) {
               var n = element===".table-header"?0:1;
+              $(".table-header .code").val(data[0].code);
               $.each($(element+" .font-select option"),function (i2, v2) {
                 if(v2.innerHTML === data[n].fontFamily){ this.selected = true; }
               });
@@ -522,6 +522,10 @@ var panel = function () {
             showStyle(".table-header");
             showStyle(".table-body");
             function setStyle() {
+              //code设置
+              $(".table-header .code").off("change").on("change",function () {
+                $($this.find("th.td")[i]).attr("code",$(this).val()) ;
+              });
               //font-family设置
               $(".table-header .font-select").off("change").on("change",function () {
                 $this.find("th.td")[i].style.fontFamily = $(this).val();
@@ -657,6 +661,7 @@ var panel = function () {
     data.textDecoration  = $this.css("text-decoration");
     data.textAlign       = $this.css("text-align");
     data.beforStyle      = $this.attr("style");
+    data.code            = $this.attr("code")?$this.attr("code"):"";
     //默认样式
     var $style = $('<div class="ctrl-item">' +
       '<label class="ctrl-item-title">字体/号</label>'+
@@ -666,7 +671,8 @@ var panel = function () {
       '</div>' +
       '</div>\n' +
       '<div class="ctrl-item"><label class="ctrl-item-title">粗斜体</label><div class="ctrl-item-content font-set"><div class="font-color">A<input class="color-choose" type="color"></div><div class="font-bold">B</div><div class="font-italic">I</div><div class="font-underline">U</div></div></div>' +
-      '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'
+      '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'+
+      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'
     );
     $style.appendTo($(".edit-panel .panel-ctrl"));
     showStyle();
@@ -684,6 +690,7 @@ var panel = function () {
       data.fontWeight === "bold"?$(".font-bold").addClass("active"):$(".font-bold").removeClass("active");
       data.fontStyle  === "italic"?$(".font-italic").addClass("active"):$(".font-italic").removeClass("active");
       data.textDecoration.indexOf("underline") > -1?$(".font-underline").addClass("active"):$(".font-underline").removeClass("active");
+      $(".code").val(data.code);
     }
     setStyle();
     function setStyle() {
@@ -725,6 +732,10 @@ var panel = function () {
           case 2 : $($this).css("text-align","right");break;
         }
       });
+      //code 设置
+      $(".code").off("change").on("change",function () {
+        $this.attr("code",$(this).val()) ;
+      });
     }
   };
   var renderCustomEditPanel = function () {
@@ -734,6 +745,86 @@ var panel = function () {
     $(".edit-panel .custom-content").on("input",function () {
       $this.find(".custom-text").text($(this).val());
     });
+  };
+  var renderLineEditPanel = function () {
+    //先清除内容
+    $(".edit-panel .panel-ctrl").html("");
+    $this.css('background-color', '#fff');
+    //getStyle
+    var data = {};
+    if($this.attr("direction") ==="horizontal" ){
+      data.lineWidth       = $this.css("border-top-width");
+      data.lineColor       = rgb2hex($this.css("border-top-color"));
+      data.lineStyle       = $this.css("border-top-style");
+    }else if ($this.attr("direction") ==="vertical" ){
+      data.lineWidth       = $this.css("border-right-width");
+      data.lineColor       = rgb2hex($this.css("border-right-color"));
+      data.lineStyle       = $this.css("border-right-style");
+    }
+    data.lineDirection   = $this.attr("direction");
+    data.code            = $this.attr("code");
+    //默认样式
+    var $style = $('<div class="ctrl-item">' +
+      '<label class="ctrl-item-title">线条样式</label>'+
+      '<div class="ctrl-item-content">'+
+      '<select class="line-style" name="lineStyle"><option value="solid" name="solid">solid</option><option value="dashed" name="dashed">dashed</option><option value="dotted" name="dotted">dotted</option><option value="double " name="double">double</option></select>' +
+      '</div>' +
+      '</div>\n' +
+      '<div class="ctrl-item"><label class="ctrl-item-title">线条宽度</label><input class="line-width" type="number" name="line-width" value="2">px</div>' +
+      '<div class="ctrl-item"><label class="ctrl-item-title">线条颜色</label><div class="ctrl-item-content"><div class="line-color"><input class="color-choose" type="color"></div></div></div>' +
+      '<div class="ctrl-item"><label class="ctrl-item-title">线条方向</label><div class="ctrl-item-content line-direction"><div class="line-horizontal active">水平</div><div class="line-vertical">垂直</div></div></div>'+
+      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'
+    );
+    $style.appendTo($(".edit-panel .panel-ctrl"));
+    showStyle();
+    function showStyle() {
+      $.each($(".line-style option"),function (i, v) {
+        if(v.innerHTML === data.lineStyle){ this.selected = true; }
+      });
+      $(".line-width").val(parseInt(data.lineWidth));
+      $(".line-color .color-choose").val(data.lineColor);
+      $.each($(".line-direction>div"),function (i, v) {
+        if(v.className.indexOf(data.lineDirection) > -1){
+          $(v).addClass('active').siblings().removeClass("active");
+        }
+      });
+      $(".code").val(data.code);
+    }
+    setStyle();
+    function setStyle(){
+      //line-style设置
+      $(".line-style").off("change").on("change",function () {
+        $this[0].style.borderTopStyle = $(this).val();
+        $this[0].style.borderRightStyle = $(this).val();
+      });
+      //line-width 设置
+      $(".line-width").off("change").on("change",function () {
+        $this[0].style.borderTopWidth = $(this).val()+"px";
+        $this[0].style.borderRightWidth = $(this).val()+"px";
+      });
+      //line-color设置
+      $(".color-choose").off("change").on("change",function () {
+        $this[0].style.borderTopColor = $(this).val();
+        $this[0].style.borderRightColor = $(this).val();
+      });
+      //line-direction 设置
+      $(".line-direction").off("click").on("click","div",function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        if($(this).hasClass("line-horizontal")){
+          if(parseInt($this.css("height")) >= 50){$this.css("width",$this.css("height"));}
+          $this.addClass("line-h").removeClass('line-v');
+          $this.attr("direction",'horizontal');
+        }else if($(this).hasClass("line-vertical")){
+          if(parseInt($this.css("width")) >= 50){$this.css("height",$this.css("width"));}
+          $this.addClass("line-v").removeClass('line-h');
+          $this.attr("direction",'vertical');
+        }
+      });
+      //code 设置
+      $(".code").off("change").on("change",function () {
+        $this.attr("code",$(this).val());
+      });
+    }
   };
   var createPanel = function (element) {
     var frage = document.createDocumentFragment();
@@ -789,9 +880,10 @@ var Xedit = function () {
     if ($(document.body).find(".add-panel").length <= 0) {
       var $addPanel = $('<div class="add-panel"><div class="title">打印项目添加</div></div>').appendTo($(document.body));
       var $addCtrl = $('<div class="add-ctrl"></div>').appendTo($addPanel);
-      $('<div class="ctrl-item add-table">添加一个表格</div>').appendTo($addCtrl);
-      $('<div class="ctrl-item add-custom">自定义文字</div>').appendTo($addCtrl);
-      $('<div class="ctrl-item add-default">收货人-姓名</div>').appendTo($addCtrl);
+      $('<div class="ctrl-item add-table" xedit-type="table">添加一个表格</div>').appendTo($addCtrl);
+      $('<div class="ctrl-item add-custom" xedit-type="xlable">自定义文字</div>').appendTo($addCtrl);
+      $('<div class="ctrl-item add-default" xedit-type="lable" xedit-code="username" xedit-text="[姓名]">收货人-姓名</div>').appendTo($addCtrl);
+      $('<div class="ctrl-item add-line" xedit-type="line">线条</div>').appendTo($addCtrl);
     }
   };
   this.get = function () {
@@ -812,7 +904,7 @@ var Xedit = function () {
       elem.w = this.offsetWidth;
       elem.h = this.offsetHeight;
       elem.style = $(this).attr("style");
-      elem.code = "";
+      elem.code = $(this).attr("code");
       if ($(this).hasClass("table")) {
         elem.type = "table";
         elem.tableData = {};
@@ -820,8 +912,9 @@ var Xedit = function () {
         var gridBody = [];
         $.each($(this).find("th.td"), function () {
           var item = {};
+          item.itemValue = this.innerHTML;
+          item.code = $(this).attr("code");
           item.style = $(this).attr("style");
-          item.value = this.innerHTML;
           if (this.style.display !== "none") {
             item.isShow = true;
           } else {
@@ -834,9 +927,8 @@ var Xedit = function () {
             var body = [];
             $.each($(v).find("td.td"), function () {
               var item = {};
+              item.itemValue = this.innerHTML;
               item.style = $(this).attr("style");
-              item.value = this.innerHTML;
-              item.code = "";
               if (this.style.display !== "none") {
                 item.isShow = true;
               } else {
@@ -861,6 +953,10 @@ var Xedit = function () {
         elem.value = $(this).children(".custom-text").text();
 
         datas.elements.push(elem);
+      }else if($(this).hasClass("div-line")){
+        elem.type = "line";
+        elem.direction = $(this).attr("direction");
+        datas.elements.push(elem);
       }
 
     });
@@ -876,6 +972,7 @@ var Xedit = function () {
     renderRule("#panel", this.elem);
   };
   this.setDatas = function (datas) {
+    this.init("#target");
     $("#panel").html("");
     $(".edit-panel").remove();
     this.setWidth(datas.panel.width);
@@ -883,21 +980,34 @@ var Xedit = function () {
     $.each(datas.elements, function (i, v) {
       switch (v.type) {
         case "label" :
-          var addElem = $('<div class="div-default move-element" style="' + v.style + '"><span class="default-text">【' + v.code + '】</span></div>').appendTo($("#panel"));
+          var addElem = $('<div class="div-default move-element" code="'+v.code+'" style="' + v.style + '"><span class="default-text">' + v.value + '</span></div>').appendTo($("#panel"));
           break;
         case "xlabel" :
-          var addElem = $('<div class="div-custom move-element"  style="' + v.style + '"><span class="custom-text">【' + v.code + '】</span></div>').appendTo($("#panel"));
+          var addElem = $('<div class="div-custom move-element"  code="'+v.code+'" style="' + v.style + '"><span class="custom-text">' + v.value + '</span></div>').appendTo($("#panel"));
+          break;
+        case "line" :
+          var addElem = $('<div class="div-line move-element" direction="'+v.direction+'"  code="'+v.code+'" style="' + v.style + '"></div>').appendTo($("#panel"));
+
+          switch ($(addElem).attr("direction")){
+            case "horizontal": $(addElem).addClass("line-h").removeClass("line-v");
+              break;
+            case "vertical": $(addElem).addClass("line-v").removeClass("line-h");
+              break;
+          }
+
           break;
         case "table" :
           addTable(v.tableData, v);
           break
       }
+
       addElem !== undefined && addElem.css({width: v.w, height: v.h, left: v.x, top: v.y,});
       drag(addElem, addElem, "#panel");
       resize(".move-element");
       panel();
     });
-    ;
+
+    return $("#stage").html();
   };
   this.setImg = function (url) {
     if($("#panel").find(".panel-bg").length <= 0){
@@ -925,6 +1035,10 @@ var Xedit = function () {
     drag(addElem, addElem, "#panel");
     resize(".move-element");
     panel();
+  };
+  this.getHtml = function (datas) {
+    var html = this.setDatas(datas);
+    return html;
   }
 };
 var xedit = new Xedit();

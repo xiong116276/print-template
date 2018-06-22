@@ -10,7 +10,7 @@ body{
 %panel{
   position: absolute;
   top: 100px;
-  right: 100px;
+  left: 1290px;
   width: 360px;
   background-color: #fff;
   min-height: 300px;
@@ -339,8 +339,8 @@ body{
 //添加面板
 .add-panel{
   @extend %panel;
-  left: 55px;
-  right: 0;
+  left: 1000px;
+  top: 100px;
   padding: 6px;
   z-index: 10;
   width: 220px;
@@ -551,8 +551,57 @@ body{
   }
 }
 
-
-
+//线条编辑面板
+.edit-panel{
+  .line-style{
+    width: 100px;
+    height: 25px;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .line-width{
+    width: 40px;
+    height: 25px;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 5px;
+  }
+  .line-direction{
+    >div{
+      float: left;
+      border: 1px solid #ccc;
+      padding: 3px 8px;
+      cursor: pointer;
+      margin-right: 10px;
+      &.active{
+        border-color: #f43737;
+        color: #f43737;
+      }
+    }
+  }
+}
+#panel{
+  >.div-line{
+    top:20px;
+    left: 20px;
+    overflow: unset;
+    border:0;
+  }
+  >.line-h{
+    height: 1px;
+    max-height: 1px;
+    min-height: 1px;
+    min-width: 50px;
+    border-top: 2px solid #ccc;
+  }
+  >.line-v{
+    width: 1px;
+    max-width: 1px;
+    min-width: 1px;
+    min-height: 50px;
+    border-right: 2px solid #ccc;
+  }
+}
 
 
 

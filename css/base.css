@@ -1,40 +1,94 @@
-/*
-Error: Invalid GBK character "\xE5"
-        on line 35 of base.scss
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, a, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, iframe {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-30: .clearfix {
-31:   *zoom: 1;
-32:   &:before,&:after { display: table;  line-height: 0; content: ""; }
-33:   &:after { clear: both; }
-34: }
-35: //iframe height100%去掉容器纵向滚动条
-36: iframe{
-37:   vertical-align: middle;
-38: }
-39: 
-40: //改变滚动条样式
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-Backtrace:
-base.scss:35
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1322:in `block in find_encoding_error'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `each'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `each_with_index'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `find_encoding_error'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/util.rb:930:in `check_sass_encoding'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:439:in `check_encoding!'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:395:in `_to_tree'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.25/bin/scss:13:in `<top (required)>'
-C:/Ruby23/bin/scss:22:in `load'
-C:/Ruby23/bin/scss:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid GBK character \"\xE5\"\A         on line 35 of base.scss\A \A 30: .clearfix {\A 31:   *zoom: 1;\A 32:   &:before,&:after { display: table;  line-height: 0; content: \"\"; }\A 33:   &:after { clear: both; }\A 34: }\A 35: //iframe height100%去掉容器纵向滚动条\A 36: iframe{\A 37:   vertical-align: middle;\A 38: }\A 39: \A 40: //改变滚动条样式"; }
+fieldest, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+capation, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+a {
+  text-decoration: none;
+  color: #83868a; }
+
+a:hover {
+  cursor: pointer; }
+
+.fl {
+  float: left !important; }
+
+.fr {
+  float: right !important; }
+
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: ""; }
+  .clearfix:after {
+    clear: both; }
+
+iframe {
+  vertical-align: middle; }
+
+/*消除input type为number的上下角标 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0; }
+
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  /*不使用默认样式右边小XX*/ }
+
+/*placeholder文字颜色统一*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #b5b5b5; }
+input:-moz-placeholder, textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #b5b5b5; }
+input::-moz-placeholder, textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #b5b5b5; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #b5b5b5; }
+
+body {
+  font-size: 14px;
+  color: #333;
+  background-color: #e4e4e4; }
+
+/*# sourceMappingURL=base.css.map */

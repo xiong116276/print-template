@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="css/template-test.min.css">
+  <link rel="stylesheet" href="css/template-test.css">
 	<style>
 		.template-edit{
 			float: left;
@@ -31,18 +31,19 @@
 	<div class="template-edit add-table" >添加一个表格</div>
 	<div class="template-edit add-default" onclick='xedit.addDefault("添加元素")'>添加默认元素</div>
 	<div class="template-edit add-custom" onclick='xedit.addCustom("添加元素")'>添加自定义元素</div>
+	<div class="template-edit get-html">获取html</div>
 	<div id="target"></div>
 <script src="js/jquery-3.1.1.js"></script>
-<script src="js/template-test.min.js"></script>
+<script src="js/template-test.js"></script>
 	<script>
     var datas = {
       panel:{
-        width:650,
-        height:500
+        width:850,
+        height:700
       },
       elements:[
         {
-          code: "收货人",
+          code: "codeLabel",
           h: 50,
           style: "font-family: 楷体; font-size: 18px; text-align: center;",
           type: "label",
@@ -52,162 +53,143 @@
           value:"收货人-姓名"
         },
         {
-          code: "自定义",
+          code: "codeLine",
+          direction: "horizontal",
+          h: 2,
+          style: "width: 104px; height: 104px; left: 20px; top: 20px; background-color: rgb(255, 255, 255); cursor: move; border-top-style: dashed; border-right-style: dashed;",
+          type: "line",
+          w: 104,
+          x: 20,
+          y: 20,
+        },
+        {
+          code: "codeXlabel",
           h: 50,
           style: "font-family: 楷体; font-size: 18px; text-align: center;",
           type: "xlabel",
           w: 100,
           x: 0,
           y: 0,
-          value:"收货人-姓名"
+          value:"自定义"
         },
         {
           h: 69,
           style: "cursor: move; left: 129px; top: 93px;",
           tableData: {
+            "code":"codeTable",
             "gridHeader": [
               {
-                "fontName":"黑体",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "序号",
-                "fontSize": 17,
-                "isShow":true
+                "isShow":true,
+                "code":"code0"
               },
               {
-                "fontName":"黑体",
-                "textAlign": "center",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "商品图片",
-                "fontSize": 16,
-                "isShow":false
+                "isShow":false,
+                "code":"code1"
               },
               {
-                "fontName":"楷体",
-                "textAlign": "center",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "商品名称",
-                "fontSize": 18,
-                "isShow":true
+                "isShow":true,
+                "code":"code2"
               },
               {
-                "fontName":"宋体",
-                "textAlign": "right",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "商家编码",
-                "fontSize": 15,
-                "isShow":true
+                "isShow":true,
+                "code":"code3"
               },
               {
-                "fontName":"微软雅黑",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "货号",
-                "fontSize": 14,
-                "isShow":true
+                "isShow":true,
+                "code":"code4"
               },
               {
-                "fontName":"黑体",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "销售属性",
-                "fontSize": 12,
-                "isShow":true
+                "isShow":true,
+                "code":"code5"
               },
               {
-                "fontName":"黑体",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "单价",
-                "fontSize": 16,
-                "isShow":true
+                "isShow":true,
+                "code":"code6"
               },
               {
-                "fontName":"黑体",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "数量",
-                "fontSize": 16,
-                "isShow":true
+                "isShow":true,
+                "code":"code7"
               },
               {
-                "fontName":"黑体",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "金额",
-                "fontSize": 16,
-                "isShow":true
+                "isShow":true,
+                "code":"code8"
               },
               {
-                "fontName":"黑体",
-                "textAlign": "left",
+                "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "货位",
-                "fontSize": 16,
-                "isShow":false
+                "isShow":false,
+                "code":"code9"
               }
             ],
             "gridBody": [
               [
                 {
-                  "fontName":"楷体",
-                  "textAlign": "left",
-                  "code": "1",
-                  "fontSize": 14,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "1",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "left",
-                  "code": "<img src='images/i1.jpg'/>",
-                  "fontSize": 15,
-                  "isShow":false,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "<img src='images/i1.jpg'/>",
+                  "isShow":false
                 },
                 {
-                  "fontName":"宋体",
-                  "textAlign": "center",
-                  "code": "衬衫",
-                  "fontSize": 16,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "衬衫",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "right",
-                  "code": "B001",
-                  "fontSize": 17,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "B001",
+                  "isShow":true
                 },
                 {
-                  "fontName":"微软雅黑",
-                  "textAlign": "left",
-                  "code": "G001",
-                  "fontSize": 18,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "G001",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "left",
-                  "code": "xxx",
-                  "fontSize": 16,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "xxx",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "left",
-                  "code": "80",
-                  "fontSize": 16,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "80",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "left",
-                  "code": "5",
-                  "fontSize": 16,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "5",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "left",
-                  "code": "400",
-                  "fontSize": 16,
-                  "isShow":true,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "400",
+                  "isShow":true
                 },
                 {
-                  "fontName":"黑体",
-                  "textAlign": "left",
-                  "code": "no-1",
-                  "fontSize": 16,
-                  "isShow":false,
+                  "style":'font-size: 15px;text-align: center;font-family: 黑体',
+                  "itemValue": "no-1",
+                  "isShow":false
                 }
               ]
             ]
@@ -220,13 +202,17 @@
       ]
     };
 		$(".template-init-data").on("click",function () {
-			xedit.setDatas(datas);
+			xedit.setDatas(xedit.get());
     });
 		$(".add-img").on("click",function () {
 			xedit.setImg("images/bg.jpg");
     });
 		$(".add-table").on("click",function () {
 			xedit.addTable(datas.elements[2].tableData);
+    });
+		$(".get-html").on("click",function () {
+			var html = xedit.getHtml(datas);
+			console.log(html);
     });
     // 初始化
     // var xedit = xedit.init("#target",500,800);
