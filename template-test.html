@@ -44,6 +44,7 @@
       elements:[
         {
           code: "codeLabel",
+					text:"姓名",
           h: 50,
           style: "font-family: 楷体; font-size: 18px; text-align: center;",
           type: "label",
@@ -202,7 +203,7 @@
       ]
     };
 		$(".template-init-data").on("click",function () {
-			xedit.setDatas(xedit.get());
+			xedit.setDatas(datas);
     });
 		$(".add-img").on("click",function () {
 			xedit.setImg("images/bg.jpg");
@@ -211,7 +212,7 @@
 			xedit.addTable(datas.elements[2].tableData);
     });
 		$(".get-html").on("click",function () {
-			var html = xedit.getHtml(datas);
+			var html = xedit.getHtml(xedit.get());
 			console.log(html);
     });
     // 初始化

@@ -326,8 +326,9 @@ var addElement = function () {
 var addTable = function (data,style) {
   var frag = document.createDocumentFragment();
   var $table = $('<table class="table move-element" code="'+data.code+'"></table>').appendTo($(frag));
+  var $thead = $('<thead></thead>').appendTo($table);
   var $tbody = $('<tbody></tbody>').appendTo($table);
-  var $gridHeader = $('<tr class="tr"></tr>').appendTo($tbody);
+  var $gridHeader = $('<tr class="tr"></tr>').appendTo($thead);
   if(style !== undefined){
     $table.css({
       width: style.w,
@@ -347,7 +348,7 @@ var addTable = function (data,style) {
 
   //表格内容
   $.each(data.gridBody,function (i1,v1) {
-    var $gridBody = $('<tr class="tr"></tr>').appendTo($table);
+    var $gridBody = $('<tr class="tr"></tr>').appendTo($tbody);
     $.each(v1,function (i2,v2) {
       if(v2.isShow){
         $('<td class="td" style="'+v2.style+'">'+v2.itemValue+'</td>').appendTo($gridBody);
@@ -662,6 +663,7 @@ var panel = function () {
     data.textAlign       = $this.css("text-align");
     data.beforStyle      = $this.attr("style");
     data.code            = $this.attr("code")?$this.attr("code"):"";
+    data.text            = $this.attr("text")?$this.attr("text"):"";
     //默认样式
     var $style = $('<div class="ctrl-item">' +
       '<label class="ctrl-item-title">字体/号</label>'+
@@ -672,7 +674,8 @@ var panel = function () {
       '</div>\n' +
       '<div class="ctrl-item"><label class="ctrl-item-title">粗斜体</label><div class="ctrl-item-content font-set"><div class="font-color">A<input class="color-choose" type="color"></div><div class="font-bold">B</div><div class="font-italic">I</div><div class="font-underline">U</div></div></div>' +
       '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'+
-      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'
+      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'+
+      '<div class="ctrl-item"><label class="ctrl-item-title">text</label><div class="ctrl-item-content"><input class="text" type="text"></div></div>'
     );
     $style.appendTo($(".edit-panel .panel-ctrl"));
     showStyle();
@@ -691,6 +694,7 @@ var panel = function () {
       data.fontStyle  === "italic"?$(".font-italic").addClass("active"):$(".font-italic").removeClass("active");
       data.textDecoration.indexOf("underline") > -1?$(".font-underline").addClass("active"):$(".font-underline").removeClass("active");
       $(".code").val(data.code);
+      $(".text").val(data.text);
     }
     setStyle();
     function setStyle() {
@@ -736,11 +740,16 @@ var panel = function () {
       $(".code").off("change").on("change",function () {
         $this.attr("code",$(this).val()) ;
       });
+      //text 设置
+      $(".text").off("change").on("change",function () {
+        $this.attr("text",$(this).val()) ;
+      });
     }
   };
   var renderCustomEditPanel = function () {
     var val = $this.text();
     renderDefaultEditPanel();
+    $(".text").parents(".ctrl-item").css("display","none");
     $('<div class="ctrl-item"><label class="ctrl-item-title">文字项目</label><div class="ctrl-item-content"><input class="custom-content" type="text" value="'+val+'"></div></div>').appendTo($(".edit-panel .panel-ctrl"));
     $(".edit-panel .custom-content").on("input",function () {
       $this.find(".custom-text").text($(this).val());
@@ -945,6 +954,7 @@ var Xedit = function () {
         datas.elements.push(elem);
       } else if ($(this).hasClass("div-default")) {
         elem.type = "label";
+        elem.text = $(this).attr("text");
         elem.value = $(this).children(".default-text").text();
 
         datas.elements.push(elem);
@@ -980,7 +990,7 @@ var Xedit = function () {
     $.each(datas.elements, function (i, v) {
       switch (v.type) {
         case "label" :
-          var addElem = $('<div class="div-default move-element" code="'+v.code+'" style="' + v.style + '"><span class="default-text">' + v.value + '</span></div>').appendTo($("#panel"));
+          var addElem = $('<div class="div-default move-element" code="'+v.code+'" text="'+v.text+'" style="' + v.style + '"><span class="default-text">' + v.value + '</span></div>').appendTo($("#panel"));
           break;
         case "xlabel" :
           var addElem = $('<div class="div-custom move-element"  code="'+v.code+'" style="' + v.style + '"><span class="custom-text">' + v.value + '</span></div>').appendTo($("#panel"));
@@ -1006,8 +1016,6 @@ var Xedit = function () {
       resize(".move-element");
       panel();
     });
-
-    return $("#stage").html();
   };
   this.setImg = function (url) {
     if($("#panel").find(".panel-bg").length <= 0){
@@ -1037,7 +1045,39 @@ var Xedit = function () {
     panel();
   };
   this.getHtml = function (datas) {
-    var html = this.setDatas(datas);
+    this.setDatas(datas);
+    if($(".div-default").length > 0){
+      $.each($(".div-default"),function (i, v) {
+        var text = $(v).children('.default-text').html();
+        text = text.replace($(v).attr('text'),'${'+$(v).attr('code')+'}');
+        $(v).children('.default-text').html(text);
+      });
+    }
+
+    if($(".table").length > 0){
+      $.each($(".table"),function (i, v) {
+        $.each($(v).find('th'),function (i2,v2) {
+          $(v).children('tbody').find('td.td')[i2].innerHTML = '${item.'+$(v2).attr('code')+'}';
+        });
+      });
+    }
+
+    var html = $("#stage").html();
+
+    if($(".table").length > 0){
+      html = html.replace('<tbody>','<tbody>\n' +
+        '\t\t\t[#if order?? && order.item?size gt 0]\n' +
+        '\t\t\t[#list order.items as item]');
+      html = html.replace('</tbody>','[/#list]\n' +
+        '\t\t\t[/#if]\n' +
+        '\t\t\t</tbody>');
+    }
+
+    var head   = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>test</title><link rel="stylesheet" href="${base}/css/template-test.css"></head><body>';
+    var footer = '</body></html>';
+
+    html = head + html + footer;
+
     return html;
   }
 };

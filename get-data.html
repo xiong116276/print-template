@@ -3,16 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<title>test</title>
-	<link rel="stylesheet" href="css/template-test.css">
-	<style>
-		#stage{
-			border: 1px solid #ccc;
-		}
-	</style>
+	<link rel="stylesheet" href="${base}/css/template-test.css">
 </head>
 <body>
-<div id="stage">
-	<div id="panel"><div class="div-default move-element" code="codeLabel" style="font-family: 楷体; font-size: 18px; text-align: center; width: 100px; height: 50px; left: 0px; top: 0px;"><span class="default-text">收货人-姓名</span></div><div class="div-line move-element line-h" direction="horizontal" code="codeLine" style="width: 104px; height: 2px; left: 20px; top: 20px; background-color: rgb(255, 255, 255); cursor: move; border-top-style: dashed; border-right-style: dashed;"></div><div class="div-custom move-element" code="codeXlabel" style="font-family: 楷体; font-size: 18px; text-align: center; width: 100px; height: 50px; left: 0px; top: 0px;"><span class="custom-text">自定义</span></div><table class="table move-element" code="codeTable" style="width: 529px; height: 69px; left: 10px; top: 129px;"><tbody><tr class="tr"><th class="td" code="code0" style="font-size: 15px;text-align: center;font-family: 黑体">序号</th><th class="td" code="code1" style="font-size: 15px;text-align: center;font-family: 黑体;display: none">商品图片</th><th class="td" code="code2" style="font-size: 15px;text-align: center;font-family: 黑体">商品名称</th><th class="td" code="code3" style="font-size: 15px;text-align: center;font-family: 黑体">商家编码</th><th class="td" code="code4" style="font-size: 15px;text-align: center;font-family: 黑体">货号</th><th class="td" code="code5" style="font-size: 15px;text-align: center;font-family: 黑体">销售属性</th><th class="td" code="code6" style="font-size: 15px;text-align: center;font-family: 黑体">单价</th><th class="td" code="code7" style="font-size: 15px;text-align: center;font-family: 黑体">数量</th><th class="td" code="code8" style="font-size: 15px;text-align: center;font-family: 黑体">金额</th><th class="td" code="code9" style="font-size: 15px;text-align: center;font-family: 黑体;display: none">货位</th></tr><tr class="tr"><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">1</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体;display: none"><img src="images/i1.jpg"></td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">衬衫</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">B001</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">G001</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">xxx</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">80</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">5</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">400</td><td class="td" style="font-size: 15px;text-align: center;font-family: 黑体;display: none">no-1</td></tr></tbody></table></div>
+<div id="panel">
+	<div class="div-default move-element" code="codeLabel" text="姓名"
+			 style="font-family: 楷体; font-size: 18px; text-align: center; width: 100px; height: 50px; left: 0px; top: 0px; background-color: rgb(255, 255, 255);">
+		<span class="default-text">收货人-${codeLabel}</span></div>
+	<div class="div-line move-element line-h" direction="horizontal" code="codeLine"
+			 style="width: 104px; height: 2px; left: 20px; top: 20px; background-color: rgb(255, 255, 255); cursor: move; border-top-style: dashed; border-right-style: dashed;"></div>
+	<div class="div-custom move-element" code="codeXlabel"
+			 style="font-family: 楷体; font-size: 18px; text-align: center; width: 100px; height: 50px; left: 0px; top: 0px; cursor: move; background-color: rgb(255, 255, 255);">
+		<span class="custom-text">自定义</span></div>
+	<table class="table move-element" code="undefined" style="width: 529px; height: 69px; left: 10px; top: 129px;">
+		<thead>
+		<tr class="tr">
+			<th class="td" code="code0" style="font-size: 15px;text-align: center;font-family: 黑体">序号</th>
+			<th class="td" code="code1"
+					style="font-size: 15px;text-align: center;font-family: 黑体;display: none;display: none">商品图片
+			</th>
+			<th class="td" code="code2" style="font-size: 15px;text-align: center;font-family: 黑体">商品名称</th>
+			<th class="td" code="code3" style="font-size: 15px;text-align: center;font-family: 黑体">商家编码</th>
+			<th class="td" code="code4" style="font-size: 15px;text-align: center;font-family: 黑体">货号</th>
+			<th class="td" code="code5" style="font-size: 15px;text-align: center;font-family: 黑体">销售属性</th>
+			<th class="td" code="code6" style="font-size: 15px;text-align: center;font-family: 黑体">单价</th>
+			<th class="td" code="code7" style="font-size: 15px;text-align: center;font-family: 黑体">数量</th>
+			<th class="td" code="code8" style="font-size: 15px;text-align: center;font-family: 黑体">金额</th>
+			<th class="td" code="code9"
+					style="font-size: 15px;text-align: center;font-family: 黑体;display: none;display: none">货位
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		[#if order?? && order.item?size gt 0]
+		[#list order.items as item]
+		<tr class="tr">
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code0}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体;display: none;display: none">
+				${item.code1}
+			</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code2}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code3}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code4}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code5}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code6}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code7}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code8}</td>
+			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体;display: none;display: none">
+				${item.code9}
+			</td>
+		</tr>
+		[/#list]
+		[/#if]
+		</tbody>
+	</table>
 </div>
 </body>
 </html>
