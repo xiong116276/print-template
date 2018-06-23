@@ -89,7 +89,8 @@
                 "style":'font-size: 15px;text-align: center;font-family: 黑体',
                 "itemValue": "商品图片",
                 "isShow":false,
-                "code":"code1"
+                "code":"code1",
+								"type":"img"
               },
               {
                 "style":'font-size: 15px;text-align: center;font-family: 黑体',
@@ -149,7 +150,8 @@
                 },
                 {
                   "style":'font-size: 15px;text-align: center;font-family: 黑体',
-                  "itemValue": "<img src='images/i1.jpg'/>",
+                  "itemValue": "images/i1.jpg",
+                  "type":"img",
                   "isShow":false
                 },
                 {
@@ -203,7 +205,7 @@
       ]
     };
 		$(".template-init-data").on("click",function () {
-			xedit.setDatas(datas);
+			xedit.setDatas(xedit.get());
     });
 		$(".add-img").on("click",function () {
 			xedit.setImg("images/bg.jpg");

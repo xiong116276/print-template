@@ -12,7 +12,8 @@ var tableData = {
       "style":'font-size: 15px;text-align: center;font-family: 黑体',
       "itemValue": "商品图片",
       "isShow":false,
-      "code":"code1"
+      "code":"code1",
+      "type":"img"
     },
     {
       "style":'font-size: 15px;text-align: center;font-family: 黑体',
@@ -72,7 +73,8 @@ var tableData = {
       },
       {
         "style":'font-size: 15px;text-align: center;font-family: 黑体',
-        "itemValue": "<img src='images/i1.jpg'/>",
+        "itemValue": "images/i1.jpg",
+        "type":"img",
         "isShow":false
       },
       {
@@ -339,10 +341,18 @@ var addTable = function (data,style) {
   }
   //表头
   $.each(data.gridHeader,function (i, v) {
-    if(v.isShow){
-      $('<th class="td" code="'+v.code+'" style="'+v.style+'">'+v.itemValue+'</th>').appendTo($gridHeader);
+    if(v.type&&v.type==='img'){
+      if(v.isShow) {
+        $('<th class="td" code="' + v.code + '" type="' + v.type + '" style="' + v.style + '">' + v.itemValue + '</th>').appendTo($gridHeader);
+      }else{
+        $('<th class="td" code="' + v.code + '" type="' + v.type + '" style="' + v.style + ';display: none">' + v.itemValue + '</th>').appendTo($gridHeader);
+      }
     }else{
-      $('<th class="td" code="'+v.code+'" style="'+v.style+';display: none">'+v.itemValue+'</th>').appendTo($gridHeader);
+      if(v.isShow){
+        $('<th class="td" code="'+v.code+'" style="'+v.style+'">'+v.itemValue+'</th>').appendTo($gridHeader);
+      }else{
+        $('<th class="td" code="'+v.code+'" style="'+v.style+';display: none">'+v.itemValue+'</th>').appendTo($gridHeader);
+      }
     }
   });
 
@@ -350,10 +360,18 @@ var addTable = function (data,style) {
   $.each(data.gridBody,function (i1,v1) {
     var $gridBody = $('<tr class="tr"></tr>').appendTo($tbody);
     $.each(v1,function (i2,v2) {
-      if(v2.isShow){
-        $('<td class="td" style="'+v2.style+'">'+v2.itemValue+'</td>').appendTo($gridBody);
+      if(v2.type&&v2.type==='img'){
+        if(v2.isShow){
+          $('<td class="td" type="' + v2.type + '" style="'+v2.style+'"><img src="'+v2.itemValue+'" alt=""></td>').appendTo($gridBody);
+        }else{
+          $('<td class="td" type="' + v2.type + '" style="'+v2.style+';display: none"><img src="'+v2.itemValue+'" alt=""></td>').appendTo($gridBody);
+        }
       }else{
-        $('<td class="td" style="'+v2.style+';display: none">'+v2.itemValue+'</td>').appendTo($gridBody);
+        if(v2.isShow){
+          $('<td class="td" style="'+v2.style+'">'+v2.itemValue+'</td>').appendTo($gridBody);
+        }else{
+          $('<td class="td" style="'+v2.style+';display: none">'+v2.itemValue+'</td>').appendTo($gridBody);
+        }
       }
     });
   });
@@ -466,6 +484,7 @@ var panel = function () {
               item.textAlign       = $(elem).css("text-align");
               item.beforStyle      = $(elem).attr("style");
               item.code            = $(elem).attr("code");
+              item.type            = $(elem).attr("type");
               elementData.push(item);
             }
           }
@@ -498,7 +517,6 @@ var panel = function () {
               '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'
             );
             $style.appendTo($(".table-style"));
-
           }
 
           renderTableStyle(elementData);
@@ -923,6 +941,7 @@ var Xedit = function () {
           var item = {};
           item.itemValue = this.innerHTML;
           item.code = $(this).attr("code");
+          $(this).attr("type")&&(item.type = $(this).attr("type"));
           item.style = $(this).attr("style");
           if (this.style.display !== "none") {
             item.isShow = true;
@@ -936,7 +955,13 @@ var Xedit = function () {
             var body = [];
             $.each($(v).find("td.td"), function () {
               var item = {};
-              item.itemValue = this.innerHTML;
+              if($(this).attr('type')&&$(this).attr('type')==='img'){
+                item.itemValue = $(this).children('img').attr('src');
+                item.type      = $(this).attr('type');
+              }else{
+                item.itemValue = this.innerHTML;
+              }
+
               item.style = $(this).attr("style");
               if (this.style.display !== "none") {
                 item.isShow = true;
@@ -1046,6 +1071,7 @@ var Xedit = function () {
   };
   this.getHtml = function (datas) {
     this.setDatas(datas);
+
     if($(".div-default").length > 0){
       $.each($(".div-default"),function (i, v) {
         var text = $(v).children('.default-text').html();
@@ -1057,7 +1083,11 @@ var Xedit = function () {
     if($(".table").length > 0){
       $.each($(".table"),function (i, v) {
         $.each($(v).find('th'),function (i2,v2) {
-          $(v).children('tbody').find('td.td')[i2].innerHTML = '${item.'+$(v2).attr('code')+'}';
+          if($(v2).attr('type')&&$(v2).attr('type')==='img'){
+            $(v).children('tbody').find('td.td')[i2].innerHTML = '<img src="${item.'+$(v2).attr('code')+'}">';
+          }else{
+            $(v).children('tbody').find('td.td')[i2].innerHTML = '${item.'+$(v2).attr('code')+'}';
+          }
         });
       });
     }
