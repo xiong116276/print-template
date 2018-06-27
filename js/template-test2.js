@@ -3,117 +3,115 @@ var tableData = {
   "code":"codeTable",
   "gridHeader": [
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "序号",
       "isShow":true,
-      "code":"code0"
+      "code":"item_index+1"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "商品图片",
       "isShow":false,
-      "code":"code1",
-      "type":"img"
+      "code":"picPath"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "商品名称",
       "isShow":true,
-      "code":"code2"
+      "code":"title"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "商家编码",
       "isShow":true,
-      "code":"code3"
+      "code":"outerSkuId"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "货号",
       "isShow":true,
-      "code":"code4"
+      "code":"outerSkuId"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "销售属性",
       "isShow":true,
-      "code":"code5"
+      "code":"skuPropertiesName"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "单价",
       "isShow":true,
-      "code":"code6"
+      "code":"price"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "数量",
       "isShow":true,
-      "code":"code7"
+      "code":"num"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "金额",
       "isShow":true,
-      "code":"code8"
+      "code":"totalFee"
     },
     {
-      "style":'font-size: 15px;text-align: center;font-family: 黑体',
+      "style":'font-size: 10px;text-align: center;font-family: 楷体',
       "itemValue": "货位",
       "isShow":false,
-      "code":"code9"
+      "code":"skuId"
     }
   ],
   "gridBody": [
     [
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "1",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
-        "itemValue": "images/i1.jpg",
-        "type":"img",
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
+        "itemValue": "<img src='images/i1.jpg'/>",
         "isShow":false
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "衬衫",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "B001",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "G001",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "xxx",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "80",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "5",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "400",
         "isShow":true
       },
       {
-        "style":'font-size: 15px;text-align: center;font-family: 黑体',
+        "style":'font-size: 10px;text-align: center;font-family: 楷体',
         "itemValue": "no-1",
         "isShow":false
       }
@@ -198,7 +196,7 @@ var createRule = function (direction,num) {
 var drag = function (_element,_panel,_stage) {
   //_element 当前元素，_panel移动的面板，_stage移动区域
   $(_element).on("mouseenter",function () {
-    $(this).css("cursor","move");
+    $(this).css({"cursor":"move"});
   });
   $(_element).on("mousedown",function (event) {
     event = event || window.event;
@@ -301,13 +299,13 @@ var addElement = function () {
     panel();
   });
   $(".add-panel .add-default").off("click").on("click",function () {
-    var addElem = $('<div class="div-default move-element" style="font-family: 黑体;font-size: 16px;text-align: left"><span class="default-text">【'+$(this).html()+'】</span></div>').appendTo($("#panel"));
+    var addElem = $('<div class="div-default move-element" code="'+$(this).attr('xedit-code')+'" text="'+$(this).attr('xedit-text')+'" style="font-family: 楷体;font-size: 10px;text-align: left"><span class="default-text">【'+$(this).html()+'】</span></div>').appendTo($("#panel"));
     drag(addElem,addElem,"#panel");
     resize(".move-element");
     panel();
   });
   $(".add-panel .add-custom").off("click").on("click",function () {
-    var addElem = $('<div class="div-custom  move-element" style="font-family: 黑体;font-size: 16px;text-align: left"><span class="custom-text">【'+$(this).html()+'】</span></div>').appendTo($("#panel"));
+    var addElem = $('<div class="div-custom  move-element" style="font-family: 楷体;font-size: 10px;text-align: left"><span class="custom-text">【'+$(this).html()+'】</span></div>').appendTo($("#panel"));
     drag(addElem,addElem,"#panel");
     resize(".move-element");
     panel();
@@ -341,18 +339,10 @@ var addTable = function (data,style) {
   }
   //表头
   $.each(data.gridHeader,function (i, v) {
-    if(v.type&&v.type==='img'){
-      if(v.isShow) {
-        $('<th class="td" code="' + v.code + '" type="' + v.type + '" style="' + v.style + '">' + v.itemValue + '</th>').appendTo($gridHeader);
-      }else{
-        $('<th class="td" code="' + v.code + '" type="' + v.type + '" style="' + v.style + ';display: none">' + v.itemValue + '</th>').appendTo($gridHeader);
-      }
+    if(v.isShow){
+      $('<th class="td" code="'+v.code+'" style="'+v.style+'">'+v.itemValue+'</th>').appendTo($gridHeader);
     }else{
-      if(v.isShow){
-        $('<th class="td" code="'+v.code+'" style="'+v.style+'">'+v.itemValue+'</th>').appendTo($gridHeader);
-      }else{
-        $('<th class="td" code="'+v.code+'" style="'+v.style+';display: none">'+v.itemValue+'</th>').appendTo($gridHeader);
-      }
+      $('<th class="td" code="'+v.code+'" style="'+v.style+';display: none">'+v.itemValue+'</th>').appendTo($gridHeader);
     }
   });
 
@@ -360,18 +350,10 @@ var addTable = function (data,style) {
   $.each(data.gridBody,function (i1,v1) {
     var $gridBody = $('<tr class="tr"></tr>').appendTo($tbody);
     $.each(v1,function (i2,v2) {
-      if(v2.type&&v2.type==='img'){
-        if(v2.isShow){
-          $('<td class="td" type="' + v2.type + '" style="'+v2.style+'"><img src="'+v2.itemValue+'" alt=""></td>').appendTo($gridBody);
-        }else{
-          $('<td class="td" type="' + v2.type + '" style="'+v2.style+';display: none"><img src="'+v2.itemValue+'" alt=""></td>').appendTo($gridBody);
-        }
+      if(v2.isShow){
+        $('<td class="td" style="'+v2.style+'">'+v2.itemValue+'</td>').appendTo($gridBody);
       }else{
-        if(v2.isShow){
-          $('<td class="td" style="'+v2.style+'">'+v2.itemValue+'</td>').appendTo($gridBody);
-        }else{
-          $('<td class="td" style="'+v2.style+';display: none">'+v2.itemValue+'</td>').appendTo($gridBody);
-        }
+        $('<td class="td" style="'+v2.style+';display: none">'+v2.itemValue+'</td>').appendTo($gridBody);
       }
     });
   });
@@ -381,13 +363,14 @@ var addTable = function (data,style) {
   resize(".move-element");
   panel();
 };
+
 //面板
 var panel = function () {
   var $this = "";
   $.each($(".move-element"),function () {
     $(this).on("click",function () {
       $this = $(this);
-      $this.css("background-color","#fbafa7").siblings().css("background-color","#fff").find(".rth").remove();
+      $this.css({"background-color":"#fbafa7","position":"absolute"}).siblings().css("background-color","#fff").find(".rth").remove();
       if($(this).find("img.panel-bg").length <=0){
         //添加编辑面板
         if($(document.body).find('.edit-panel').length <= 0){
@@ -484,7 +467,6 @@ var panel = function () {
               item.textAlign       = $(elem).css("text-align");
               item.beforStyle      = $(elem).attr("style");
               item.code            = $(elem).attr("code");
-              item.type            = $(elem).attr("type");
               elementData.push(item);
             }
           }
@@ -510,13 +492,14 @@ var panel = function () {
                 '<label class="ctrl-item-title">字体/号</label>'+
                 '<div class="ctrl-item-content">'+
                   '<select class="font-select" name="fontFamily"><option value="黑体" name="heiTi">黑体</option><option value="楷体" name="kaiTi">楷体</option><option value="宋体" name="songTi">宋体</option><option value="微软雅黑" name="yahei">微软雅黑</option></select>' +
-                  '<div class="font-size"><span class="icon-font"></span><input class="font-number" type="number" name="font-number" value="16" min="12"></div>' +
+                  '<div class="font-size"><span class="icon-font"></span><input class="font-number" type="number" name="font-number" value="10" min="10"></div>' +
                 '</div>' +
               '</div>' +
               '<div class="ctrl-item"><label class="ctrl-item-title">粗斜体</label><div class="ctrl-item-content font-set"><div class="font-color">A<input class="color-choose" type="color"></div><div class="font-bold">B</div><div class="font-italic">I</div><div class="font-underline">U</div></div></div>' +
               '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'
             );
             $style.appendTo($(".table-style"));
+
           }
 
           renderTableStyle(elementData);
@@ -687,13 +670,14 @@ var panel = function () {
       '<label class="ctrl-item-title">字体/号</label>'+
       '<div class="ctrl-item-content">'+
       '<select class="font-select" name="fontFamily"><option value="黑体" name="heiTi">黑体</option><option value="楷体" name="kaiTi">楷体</option><option value="宋体" name="songTi">宋体</option><option value="微软雅黑" name="yahei">微软雅黑</option></select>' +
-      '<div class="font-size"><span class="icon-font"></span><input class="font-number" type="number" name="font-number" value="16" min="12"></div>' +
+      '<div class="font-size"><span class="icon-font"></span><input class="font-number" type="number" name="font-number" value="10" min="10"></div>' +
       '</div>' +
       '</div>\n' +
       '<div class="ctrl-item"><label class="ctrl-item-title">粗斜体</label><div class="ctrl-item-content font-set"><div class="font-color">A<input class="color-choose" type="color"></div><div class="font-bold">B</div><div class="font-italic">I</div><div class="font-underline">U</div></div></div>' +
-      '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'+
-      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'+
-      '<div class="ctrl-item"><label class="ctrl-item-title">text</label><div class="ctrl-item-content"><input class="text" type="text"></div></div>'
+      '<div class="ctrl-item"><label class="ctrl-item-title">对齐</label><div class="ctrl-item-content text-align"><div class="text-left"></div><div class="text-center"></div><div class="text-right"></div></div></div>'
+//      +
+//      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'+
+//      '<div class="ctrl-item"><label class="ctrl-item-title">text</label><div class="ctrl-item-content"><input class="text" type="text"></div></div>'
     );
     $style.appendTo($(".edit-panel .panel-ctrl"));
     showStyle();
@@ -799,8 +783,9 @@ var panel = function () {
       '</div>\n' +
       '<div class="ctrl-item"><label class="ctrl-item-title">线条宽度</label><input class="line-width" type="number" name="line-width" value="2">px</div>' +
       '<div class="ctrl-item"><label class="ctrl-item-title">线条颜色</label><div class="ctrl-item-content"><div class="line-color"><input class="color-choose" type="color"></div></div></div>' +
-      '<div class="ctrl-item"><label class="ctrl-item-title">线条方向</label><div class="ctrl-item-content line-direction"><div class="line-horizontal active">水平</div><div class="line-vertical">垂直</div></div></div>'+
-      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'
+      '<div class="ctrl-item"><label class="ctrl-item-title">线条方向</label><div class="ctrl-item-content line-direction"><div class="line-horizontal active">水平</div><div class="line-vertical">垂直</div></div></div>'
+//      +
+//      '<div class="ctrl-item"><label class="ctrl-item-title">code</label><div class="ctrl-item-content"><input class="code" type="text"></div></div>'
     );
     $style.appendTo($(".edit-panel .panel-ctrl"));
     showStyle();
@@ -898,6 +883,7 @@ var Xedit = function () {
     resize(".move-element");
     //元素拖拽移动函数
     $.each($("#panel .move-element"), function () {
+      $(this).css("position","absolute");
       drag(this, this, "#panel");
     });
     drag(".table-ctrl>.title", ".table-ctrl", document.body);
@@ -909,7 +895,12 @@ var Xedit = function () {
       var $addCtrl = $('<div class="add-ctrl"></div>').appendTo($addPanel);
       $('<div class="ctrl-item add-table" xedit-type="table">添加一个表格</div>').appendTo($addCtrl);
       $('<div class="ctrl-item add-custom" xedit-type="xlable">自定义文字</div>').appendTo($addCtrl);
-      $('<div class="ctrl-item add-default" xedit-type="lable" xedit-code="username" xedit-text="[姓名]">收货人-姓名</div>').appendTo($addCtrl);
+      
+      $('<div class="ctrl-item add-default" xedit-type="lable" xedit-code="name" xedit-text="收货人姓名">收货人姓名</div>').appendTo($addCtrl);
+      $('<div class="ctrl-item add-default" xedit-type="lable" xedit-code="address" xedit-text="收货人地址">收货人地址</div>').appendTo($addCtrl);
+      $('<div class="ctrl-item add-default" xedit-type="lable" xedit-code="date" xedit-text="打印日期">打印日期</div>').appendTo($addCtrl);
+      
+      //xedit.addWedgit({type:'label',code:'address',text:'[地址]',view:'[收货人地址]'});
       $('<div class="ctrl-item add-line" xedit-type="line">线条</div>').appendTo($addCtrl);
     }
   };
@@ -941,7 +932,6 @@ var Xedit = function () {
           var item = {};
           item.itemValue = this.innerHTML;
           item.code = $(this).attr("code");
-          $(this).attr("type")&&(item.type = $(this).attr("type"));
           item.style = $(this).attr("style");
           if (this.style.display !== "none") {
             item.isShow = true;
@@ -955,13 +945,7 @@ var Xedit = function () {
             var body = [];
             $.each($(v).find("td.td"), function () {
               var item = {};
-              if($(this).attr('type')&&$(this).attr('type')==='img'){
-                item.itemValue = $(this).children('img').attr('src');
-                item.type      = $(this).attr('type');
-              }else{
-                item.itemValue = this.innerHTML;
-              }
-
+              item.itemValue = this.innerHTML;
               item.style = $(this).attr("style");
               if (this.style.display !== "none") {
                 item.isShow = true;
@@ -995,7 +979,14 @@ var Xedit = function () {
       }
 
     });
+
+    //每个元素按top 值排序
+    datas.elements.sort(function (a,b) {
+      return a.y-b.y
+    });
+
     $(".edit-panel").remove();
+
     return datas;
   };
   this.setWidth = function (size) {
@@ -1071,27 +1062,45 @@ var Xedit = function () {
   };
   this.getHtml = function (datas) {
     this.setDatas(datas);
-    //去掉边框
-    $('.div-default').css('border',0);
-    $('.div-custom').css('border',0);
 
+    $('.div-default').css('border',0);
+
+    $('.div-custom').css('border',0);
     if($(".div-default").length > 0){
       $.each($(".div-default"),function (i, v) {
         var text = $(v).children('.default-text').html();
-        text = text.replace($(v).attr('text'),'${'+$(v).attr('code')+'}');
+        text = text.replace($(v).attr('text'),'${'+$(v).attr('code')+'}').replace('【','').replace('】','');
         $(v).children('.default-text').html(text);
+        var h = $(v).children('.default-text').css('height');
+        $(v).children('.default-text').css({'display':'block'});
+        $(v).css({'width':'auto','right':0,'height':h});
       });
     }
 
     if($(".table").length > 0){
       $.each($(".table"),function (i, v) {
+        //获取table模板样式
+        const H = v.offsetHeight+v.offsetTop;
+        $(v).attr('h-template',H);
+        $(v).css({'width':'100%','border':'0','left':'0'});
+        $(v).find('tr').css({"border":'0','border-bottom':'1px solid #000','height':'40px'});
+        $(v).find("td").css({"border":'0'});
+        $(v).find("th").css("border",'0');
+
         $.each($(v).find('th'),function (i2,v2) {
-          if($(v2).attr('type')&&$(v2).attr('type')==='img'){
-            $(v).children('tbody').find('td.td')[i2].innerHTML = '<img src="${item.'+$(v2).attr('code')+'}">';
-          }else{
+          if(i2 == '2'){$(v2).css({'width':'50%'})};
+          if(i2 == 0) {
+            $(v).children('tbody').find('td.td')[i2].innerHTML = '${'+$(v2).attr('code')+'}';
+          }else {
             $(v).children('tbody').find('td.td')[i2].innerHTML = '${item.'+$(v2).attr('code')+'}';
           }
         });
+      });
+    }
+
+    if($('.div-line').length > 0){
+      $.each($('.div-line'),function (i, v) {
+        $(v).css({"width":$(v).width()});
       });
     }
 
@@ -1099,24 +1108,36 @@ var Xedit = function () {
 
     if($(".table").length > 0){
       html = html.replace('<tbody>','<tbody>\n' +
-        '\t\t\t[#if order?? && order.item?size gt 0]\n' +
-        '\t\t\t[#list order.items as item]');
+        '\t\t\t[#if order?? && order.orderItems?size gt 0]\n' +
+        '\t\t\t[#list order.orderItems as item]');
       html = html.replace('</tbody>','[/#list]\n' +
         '\t\t\t[/#if]\n' +
         '\t\t\t</tbody>');
     }
 
-    var head   = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>test</title><link rel="stylesheet" href="${base}/css/template-test.css"></head><body>';
+    var head   = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>test</title><link rel="stylesheet" href="${base}/xedit1.0/css/template-test.css"></head><body>';
     var footer = '</body></html>';
 
     html = head + html + footer;
+
+    //替换html table 下面元素的top 值 start
+    var sethtml = "";
+
+    var arr = html.match(/<\/table>([\s\S]*?)<\/body>/)[1].match(/<div ([\s\S]*?)<\/div>/g);
+    if(arr !== null && arr.length > 0){
+      $.each(arr,function (i, v) {
+        var top = parseInt($(v).css('top'));
+        sethtml += v.replace(/top:([\s\S]*?);/,'top:${order.orderItems?size * 40 + '+top+'}px;');
+      });
+      html = html.replace(/<\/table>([\s\S]*?)<\/html>/,'</table>'+sethtml+'</body></html>');
+    }
+    //替换html table 下面元素的top 值 end
+
 
     return html;
   }
 };
 var xedit = new Xedit();
-
-
 
 
 

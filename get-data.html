@@ -3,51 +3,75 @@
 <head>
 	<meta charset="UTF-8">
 	<title>test</title>
-	<link rel="stylesheet" href="${base}/css/template-test.css">
+	<link rel="stylesheet" href="${base}/xedit1.0/css/template-test.css">
 </head>
 <body>
 <div id="panel">
-	<table class="table move-element" code="undefined" style="width: 529px; height: 93px; left: 14px; top: 25px;">
+	<div class="div-custom move-element" code="undefined"
+			 style="font-family: 楷体; font-size: 10px; text-align: left; background-color: rgb(255, 255, 255); cursor: move; left: 388px; top: 0px; position: absolute; width: 86px; height: 20px; border: 0px;">
+		<span class="custom-text">【自定义文字】</span></div>
+	<div class="div-default move-element" code="name" text="收货人姓名"
+			 style="font-family: 楷体; font-size: 10px; text-align: left; background-color: rgb(255, 255, 255); cursor: move; left: 0px; top: 76px; position: absolute; width: 42px; height: 20px; border: 0px;">
+		<span class="default-text" style="display: block; white-space: nowrap;">${name}</span></div>
+	<table class="table move-element" code="undefined" h-template="150"
+				 style="width: 100%; height: 31px; left: 0px; top: 119px; border: 0px;">
 		<thead>
-		<tr class="tr">
-			<th class="td" code="code0" style="font-size: 15px;text-align: center;font-family: 黑体">序号</th>
-			<th class="td" code="code1" type="img" style="font-size: 15px; text-align: center; font-family: 黑体;">商品图片</th>
-			<th class="td" code="code2" style="font-size: 15px;text-align: center;font-family: 黑体">商品名称</th>
-			<th class="td" code="code3" style="font-size: 15px;text-align: center;font-family: 黑体">商家编码</th>
-			<th class="td" code="code4" style="font-size: 15px;text-align: center;font-family: 黑体">货号</th>
-			<th class="td" code="code5" style="font-size: 15px;text-align: center;font-family: 黑体">销售属性</th>
-			<th class="td" code="code6" style="font-size: 15px;text-align: center;font-family: 黑体">单价</th>
-			<th class="td" code="code7" style="font-size: 15px;text-align: center;font-family: 黑体">数量</th>
-			<th class="td" code="code8" style="font-size: 15px;text-align: center;font-family: 黑体">金额</th>
-			<th class="td" code="code9"
-					style="font-size: 15px;text-align: center;font-family: 黑体;display: none;display: none;display: none;display: none;display: none;display: none;display: none">
-				货位
+		<tr class="tr"
+				style="border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(0, 0, 0); border-left-color: initial; border-image: initial; height: 40px;">
+			<th class="td" code="item_index+1" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">序号
+			</th>
+			<th class="td" code="picPath"
+					style="font-size: 10px; text-align: center; font-family: 楷体; display: none; border: 0px;">商品图片
+			</th>
+			<th class="td" code="title"
+					style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px; width: 50%;">商品名称
+			</th>
+			<th class="td" code="outerSkuId" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">商家编码
+			</th>
+			<th class="td" code="outerSkuId" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">货号
+			</th>
+			<th class="td" code="skuPropertiesName"
+					style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">销售属性
+			</th>
+			<th class="td" code="price" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">单价</th>
+			<th class="td" code="num" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">数量</th>
+			<th class="td" code="totalFee" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">金额</th>
+			<th class="td" code="skuId"
+					style="font-size: 10px; text-align: center; font-family: 楷体; display: none; border: 0px;">货位
 			</th>
 		</tr>
 		</thead>
 		<tbody>
-		[#if order?? && order.item?size gt 0]
-		[#list order.items as item]
-		<tr class="tr">
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code0}</td>
-			<td class="td" type="img" style="font-size: 15px; text-align: center; font-family: 黑体;"><img src="${item.code1}">
+		[#if order?? && order.orderItems?size gt 0]
+		[#list order.orderItems as item]
+		<tr class="tr"
+				style="border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: rgb(0, 0, 0); border-left-color: initial; border-image: initial; height: 40px;">
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item_index+1}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; display: none; border: 0px;">
+				${item.picPath}
 			</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code2}</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code3}</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code4}</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code5}</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code6}</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code7}</td>
-			<td class="td" style="font-size: 15px;text-align: center;font-family: 黑体">${item.code8}</td>
-			<td class="td"
-					style="font-size: 15px;text-align: center;font-family: 黑体;display: none;display: none;display: none;display: none;display: none;display: none;display: none">
-				${item.code9}
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item.title}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item.outerSkuId}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item.outerSkuId}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">
+				${item.skuPropertiesName}
+			</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item.price}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item.num}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; border: 0px;">${item.totalFee}</td>
+			<td class="td" style="font-size: 10px; text-align: center; font-family: 楷体; display: none; border: 0px;">
+				${item.skuId}
 			</td>
 		</tr>
 		[/#list]
 		[/#if]
 		</tbody>
 	</table>
-</div>
+	<div class="div-default move-element" code="address" text="收货人地址"
+			 style="font-family: 楷体; font-size: 10px; text-align: left; background-color: rgb(255, 255, 255); cursor: move; left: 0px; top:${order.orderItems?size * 40 + 187}px; position: absolute; width: 60px; height: 20px; border: 0px;">
+		<span class="default-text" style="display: block; white-space: nowrap;">${address}</span></div>
+	<div class="div-default move-element" code="date" text="打印日期"
+			 style="font-family: 楷体; font-size: 10px; text-align: left; background-color: rgb(255, 255, 255); cursor: move; left: 0px; top:${order.orderItems?size * 40 + 233}px; position: absolute; width: 42px; height: 20px; border: 0px;">
+		<span class="default-text" style="display: block; white-space: nowrap;">${date}</span></div>
 </body>
 </html>
